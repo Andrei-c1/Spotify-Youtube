@@ -1,0 +1,197 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtractPlaylist" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="nrSongs_In" Type="InArgument(x:Int32)" />
+    <x:Property Name="arrayOfSongs_out" Type="OutArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>699,2019</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ExtractPlaylist_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExtractPlaylist" sap:VirtualizedContainerService.HintSize="630,1954" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Spotify Free" sap:VirtualizedContainerService.HintSize="588,1862" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a4e839ae-b99c-4047-a4ab-570cd3775e46" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554,1573" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="x:Int32" Name="nrScrolls" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="512,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[arrayOfSongs_out]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[new string(){}]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="512,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[nrScrolls]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(((nrSongs_in/30)+1))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NMouseScroll Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="2" Version="V1" />
+            <ui:InterruptibleDoWhile Condition="[count &lt;= nrScrolls]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="512,1000" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,835" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="nrScrolls" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='#' ReferenceIdx='0' Name='#'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='TITLE' ReferenceIdx='1' Name='TITLE'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='ALBUM' ReferenceIdx='2' Name='ALBUM'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='DATE ADDED' ReferenceIdx='3' Name='DATE ADDED'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4' ReferenceIdx='4' Name='Column-4'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="a4e839ae-b99c-4047-a4ab-570cd3775e46" Version="V1">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="280, 151, 1063, 5655" ElementType="Table" FriendlyName="'table Happy'" FullSelectorArgument="&lt;ctrl name='Spotify – *' role='document' /&gt;&lt;ctrl name='Spotify – *' role='grouping' /&gt;&lt;ctrl name='*' role='table' /&gt;" Guid="3654c0a9-013c-45ed-b760-639a77a5996a" InformativeScreenshot="be69dfd2ad1803e24cfe492b13454ab8.png" ScopeSelectorArgument="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free' /&gt;" SearchSteps="Selector" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,271" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="s:String[]">[arrayOfSongs_out]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="s:String[]">[arrayOfSongs_out.Append(CurrentRow(1).ToString()).ToArray]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                  <uix:NMouseScroll Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="15" Version="V1" />
+                  <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[count+1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+            </ui:InterruptibleDoWhile>
+            <Assign sap:VirtualizedContainerService.HintSize="512,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[arrayOfSongs_out]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[arrayOfSongs_out.Distinct().ToArray()]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Users\andre\AppData\Roaming\Spotify\spotify.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATWSURBVFhH1Vdbb1VFFK5KAwotpfQ2e/bscqkFIbUQpFWpNJK0oEnBcmoFWloEBO+JLybqg0aEB9+8YKsxvmlUHtTEaEiABAW8342iCBRKuQT/w/L7Zuacs8/pBk9O+6CTfNn7zKxZ65s136zZp+R/06Lft1QA9wCvAJ8Dp4DLHnxnH8e6gQo/beINzmqBXcAZQAoEbXcDtd5NcQ0OBoCzQFKQQjAKDHp3hTdMmgK86p1MBl4DSr37qzcYMvi7fuJk4n3g30nAaG9s0mRjyIdJbjDoy5vgcBz4436J/gRObJXoLw++s49jSfOSMeDD5TYMVAEXMoYMcHa7w0m8/zoo0bf9Yo5uFHN4g5jPNkj05SaJvu939qe3STT6gERnvD1JZ4PGcQmo8WGzDZ08as4Iwc2RjRK+1CF653IJ1iyU4JY5EjRqUfV1ogwQAXOVBIuMBLfNE71usejHWyXc2ynmUK/LDglxIbkEiN0+rGvoKAfG7CDYm09SouYFoqZVADNFXY9nGvwdR37/DXgPaiS4s1HC59uxEGRqFFkhoSwBZjpbrPBjXWYQKQzfWCOqZIZzOGOWKAWHN4V2pcGqRgk6kZGOBRK034jMzBXVALI11aKmeyIkQfAdGdMPt4j5qi+fxHof3hLInvnjEBT2O3y6TfRDyyV88y4xB+7FXm92+3oKez2CFY3gSYfUxtd9Yj5NSTi8WvQjLZaoqpwNAiBRhgVMKZegrcHZZgWbPRH4cSRDIE2CYrqwQ+ovPyjRxZ1OjFQ8nfw84J78TbvzO5wN7KNz2HcQNR90i962TJSucdlEBqMfsQjOcXGO+fCWwOlM8DQonmMQ4hBW9VirFRlXESyDGJfUu+cdDaLXQnxYdfhyh8sUA5AEARGa/T0SPrVCzEfd+YIc8eEtgb9jAzbN5sNup/Sp2MdryqQOqyDUtWWirgPwzPRh3NrVQSvQRfjcSntcM8eSz5PYsngMxPThEwjgTIfvdGH/KuG0WoJWHLPem20mwmfaJHx2pdPIoy223+55WOtERzKl5aLmKNFP3GprRyztceQQGL8FEIv5eL1Nof3NlYxhJdznNMYA9nPPD99na4BONdlTQ+Fx74POBY4AdZUbI2cLjuYNOlB4lyCudEGh+L7BcWIF5LH6wYuK4yREIYKQOdArejsEWFVlCUUnSGCc/y98eEtg/AUEx3ZVu9pFDy5FYcGZb4qQWugChYYpDxaiNqyYL7p/iYQvrhJzEBWQJZlkSATzLenku2LYh7cE+KmVawAHuqcJIpvq9nUm9ABRBotRepfiFDSDzHwUIJ53K9LpomZjxV2LxLzdBSEjY6wZV76oUj68JcBSfD426O6D99aKfvJ2Cd+622kBBSf6ydeAX/D8DpcTVs1xW4CYIZ4KiFBvapboN/hJJnARyP1uRMcLMQM3mbcazzMrH9+5l3SYBvef/RQidQBSvMAskeb6/MITxx4fNtvQWQ1kr+NiwGAULgMzW8mrT76O2TCwOWZYPEgkeeXE1T9SYTCUN2Ey8boPc+UGo1KAH5BJDiaCfUDBX8YkwU/pJEfFYBgoLHi8YdIW4Jx3Ugz4lbXVuyuuwUEdwCPKfzlJQZJA2z2A8m4m3uBsFpACuDW8O+J/TnmZsY9jPUCln/ZfbyUl/wAv1CA978rAXwAAAABJRU5ErkJggg==" InformativeScreenshot="f0444fb534081e9ac54bd577b84d07c3.png" Selector="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

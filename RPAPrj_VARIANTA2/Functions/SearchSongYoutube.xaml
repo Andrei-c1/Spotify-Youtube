@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchSongYoutube" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="songname_in" Type="InArgument(x:String)" />
+    <x:Property Name="browserInst_out" Type="OutArgument(ui:UiElement)" />
+    <x:Property Name="browserInstance_in" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>612,1192.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SearchSongYoutube_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchSongYoutube" sap:VirtualizedContainerService.HintSize="592,1128" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="brouserInstance" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[NAppCloseMode.Never]" DisplayName="Use Browser Chrome: YouTube" sap:VirtualizedContainerService.HintSize="530,1017.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[browserInstance_in]" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[brouserInstance]" ScopeGuid="5345daa6-0100-4fc5-85d6-68432b96b8ba" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,878" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:String[]" Name="playlist" />
+              <Variable x:TypeArguments="x:String" Name="name" />
+              <Variable x:TypeArguments="x:String" Name="variable1" />
+              <Variable x:TypeArguments="x:String" Name="variable2" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,84.6666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.youtube.com/" Version="V1" />
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,221.333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5345daa6-0100-4fc5-85d6-68432b96b8ba" Text="[songname_in]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/" DesignTimeRectangle="510, 140, 779, 39" ElementType="InputBox" FriendlyName="'INPUT search'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="e64276d7-3a7a-49c1-8579-989ba4288ad9" ImageBase64="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" InformativeScreenshot="1887bf0efb2aedf0a83712ac2d1733b5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,185.333333333333" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,85.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="ui:UiElement">[browserInst_out]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="ui:UiElement">[brouserInstance]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACUSURBVDhPpZIBDYAgEEUvAhGMQAQiEIEIRiASEYxik+8d4ER3OBG3p/iPvY3jCMAUajjC9UNkGFeJHc66uQuIQl6OEYqAyDbhKFYE/hGOEEQgZ9OKwL4Dzum1QnwXnE9KwLJoez4Ktu2nQI7gvV4rZEG/iYavW8svchMnr5E/vJgYJH5VSTvKKyO9edIZ5QnU8DugAz5ePeeqirlIAAAAAElFTkSuQmCC" InformativeScreenshot="f5c7b48351dda24de7c2c37eb8ba2257.png" Selector="&lt;html app='chrome.exe' title='*YouTube' /&gt;" Url="https://www.youtube.com/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

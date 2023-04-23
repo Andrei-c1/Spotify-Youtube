@@ -1,0 +1,175 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchPlaylist3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="playlistName_in" Type="InArgument(x:String)" />
+    <x:Property Name="foundplaylist_out" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>699,1294</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SearchPlaylist3_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchPlaylist3" sap:VirtualizedContainerService.HintSize="476,1229" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Spotify Free" sap:VirtualizedContainerService.HintSize="434,1137" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="2f130b7b-fa56-4086-9d37-760967e607d7" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="695,1202" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="foundplaylist" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="653,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2f130b7b-fa56-4086-9d37-760967e607d7" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="15, 95, 225, 40" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;ctrl name='Spotify – Web Player' role='document' /&gt;&lt;ctrl name='Main' role='grouping' /&gt;&lt;ctrl name='Search' role='link' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Spotify – Web Player' role='document' /&gt;&lt;ctrl name='Main' role='grouping' /&gt;&lt;ctrl name='Search' role='link' automationid='' check:text='Search' /&gt;" Guid="19b3787b-a3b8-4d57-8928-8769a4362471" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOUAAAAsCAYAAACaLn9qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARFSURBVHhe7dyhc6tAEAbwGhQGFRPVmhhqYlpThamiIqo1MdTUUIPCoGJQ1MRQg6EGlT9w3y3hCGE2fR1Iep3h68xv+rLcQczXvYPkXakfAoA/RSwCgDliEQDMEYsAYI5YBABzxCIAmCMWAcAcsQgA5ohFADBHLAKAOWIRAMwRi2d1c3NDz8/PFIYhbTab+je/5ro0HmDixOJZ3N7e1iHc7XYn5Xlej5PmA0yUWBzt5eWlDd7n5ye9vr6S53l1APk3v+a6HhMEgXgegAkSi6Nw4HTYOJzSGO3p6akdy8taaQzAxIjFwe7v79uQ/XRZynvLr6+veg53UWkMwISIxcH0kpQ7oHT8FA4jzyvLkmzbFscATIRYHER3SQ6mdPx/9E2hi3VL26X1JqdKXYOvs6tySoM7sqWxv2JFKb+PIiJXPA4TJRYHeX9/H9QlNd0t4zgWj4/jUlg0YewpQlcY/xsQShCJxUF0pxv6iIPn8Xw+j3R8FDeiggNQJuTZXLPIeYgor0raJj5dS3MuDqEEkVgcZGwome5e0rFRnIC29bkLSvwlOZYwRgV1sdqooO7fw64qjpa31mJFm7xq32NVpBQsrWauDlhGm6ysrxO5XJ+RF2VU6nOWW4r9OVlHcxIKk6K9ZvI4a84JEyUWBxkbSr4Ly/Mv0ilV4B4TDksTDhWaLA7obq5DdUWzVXrYb3ZsAw7JnPx4ewiXVqnOW89vAtbiUFr0EDdhO1LR5pGv25+jZbR2uu8dJkYsDnKuPSWfRzo+nk3uOqasOHS73a5UnclRx/Ses6D4wVGdjJe38X7Jm7/1lrfq2LVHcTN+3xF1wCpKV00ndNaU1TU1pjnnXAW/rHLK3u46c7YU8B8H++5wzmX3ejAxYnEQHaqhnU532qGh/jkVqqVPUb3MVCGo93SnupbS7PlmXkRZ2dSqqumqvVCqsUt9Hb2PzdYn7vAe5ug95Srlc+5UsPtjYULE4iD8fFF/CIAfj0hjTtE3efhxyiWeU177CW3LiorkkRbOfslqzYKmk6W0urqmt5z/rbta/xwuRXUXa5aW3a7WC2V708bSQe90Si9Re9Zep0Qo4ZhYHKz7IYCffguEx/F4nnexZ5RuuO9agir1yVFjxD0l352NHlSn06Hs+yaUKoTL6Ad7SoQSjonFUfTekoP2v5BxR9WBvPSneWx3Tcm27Hx4gB+HrGjR3onlu6/cUZvjKjx5GpI32x+3lm/t8rVq75h+F0o2Iy9Mqfj27itCCUfE4mg6mIy/nuX7Prmu2+LXWZa1Y/Syl2v4mB1MnFg8C+6S3a9nSTiMfGOHg/jx8VHXEEyYOLF4VrxE5c7Jd1c1ft1f2iKYADWxaAyCCSAXjeoG8/LPLAH+HLFoHAeT/9cCdEqYILEIAOaIRQAwRywCgDliEQDMEYsAYI5YBABzxCIAmCMWAcAcsQgA5ohFADBHLAKAEVf0D80t1bk2uvgqAAAAAElFTkSuQmCC" InformativeScreenshot="3e179c15f4ae010005859772e2dd59e8.png" ScopeSelectorArgument="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'grouping'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="653,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2f130b7b-fa56-4086-9d37-760967e607d7" Text="[playlistName_in]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="388, 19, 340, 40" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='Spotify – Search' role='document' /&gt;&lt;ctrl name='Top bar and user menu' role='grouping' /&gt;&lt;ctrl idx='6' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Spotify – Search' role='document' /&gt;&lt;ctrl name='Top bar and user menu' role='grouping' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" Guid="5c81841a-0d7a-4cd7-8433-5ae2487bab6e" ImageBase64="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" InformativeScreenshot="96f9acaf440825522937f002db979f80.png" ScopeSelectorArgument="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Playlists'" sap:VirtualizedContainerService.HintSize="653,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2f130b7b-fa56-4086-9d37-760967e607d7" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="334, 80, 76, 32" ElementType="CheckBox" FriendlyName="'Playlists'" FullSelectorArgument="&lt;ctrl name='Spotify – Search' role='document' /&gt;&lt;ctrl name='Spotify – Search' role='grouping' /&gt;&lt;ctrl name='All Playlists Albums Artists Songs Podcasts &amp;amp; Shows' role='list' /&gt;&lt;ctrl name='Playlists' role='link' /&gt;&lt;ctrl name='Playlists' role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Spotify – Search' role='document' /&gt;&lt;ctrl name='Spotify – Search' role='grouping' /&gt;&lt;ctrl name='All Playlists Albums Artists Songs Podcasts &amp;amp; Shows' role='list' /&gt;&lt;ctrl name='Playlists' role='link' /&gt;&lt;ctrl name='Playlists' role='check box' automationid='' check:text='Playlists' /&gt;" Guid="270e907f-573b-4d6c-aa37-c8ca92fdc62b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAkCAYAAAAeor16AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPHSURBVGhD7ZqtdqtAEMfvM6Rfp98fvAdPgKtD4eri4nC4vEAdDheHq8OhcLg4HA6HmzuzC+kCs71Ak9s0wDn/cwq7O7vzy8zspuTPYrGAWeM1A/ymRgO8urqCu7s7eHx8hKenJ3h5eQHDMH6NaL20blo/+UH+cH7+S4MAnp2dwc3Nza+D1VfPz8/CP/KT859Tb4DX19diAm7iUxP5Sf5yHNrqBfDh4YGd6NR1f3/P8lD1JcDz83NRJzjjUxH5Txw4PiQtQKoDU4dXizjo6qIWIO1OnLGpisoYx4kFSAWUMzJ1cRtLByCF6lR226EiLu1U7gC8vb1lB8+SIj4qrwZAonuqh+R9ifioUdgAeHl5yQ7Sy4O4gNZVQp4E4FR9Nlt8tN20xg1Xw46f4Cwl3tqdfv9DxIkFODx9JcAi9qp7E+z3GIhp/ewQAE0/7QlQrm+74drGS03jBsDhR5c2QCn0jx6Ch38fJAL7yvIhLfcPkDgdFOB7gqvmAJouhNsCY6e6ygxi38E2EwKCXiawVuysohyfpeCbLTseRXkBsSf7mV4EWW20LCAN0Kboo1zVegwngHTXUEAWeWBW8/WVFuDw4wufwuj27pnq+CvWrqLMIXItvLdg9ZFhYwoBAjLWVNfwLjArW2ugzyGPVh07TYCuWEOZ+mDh/Eu0WeRR9UFsQA6jv6WEnewDljinRespcP63z/Y+Ik57Bdi8+mwiCPptCS42ljsQDgieWQg29jFFSGYQ2oydBkC5hhKhrN/sVjS1AZrSTpFA4DoIXO3bX1qA+0phVQ3HTQ+iz1yDUvyppKKAhhG6siEUwRnsgOgB4jg3hDSvSwNuLh9uNa4bgYbjQ0RlpFpGnvi7D7uvDl4DVamOL6mmUVQtqzRtgajTtkxT7KU+/xrgp2QKY0fYiHsGoCJL7OZox+XbddIC/P4xpisWoINt1go3FAqDJghHAKBuMpU5Ow2Arz4kBUZduMSoqwFWddV4l3U0riPSxTJBJWYt0lcCpIiXc/SV9hgz9iA9LoVxt4ywiLcAGi7BUTcTKX0EmuCGW9ychFG8ql24GufgQNFU7cKOH0NGE4irHLULaw/Sx/BVbi1yuHmcOSYRH5VZAyBpeBrvUbasWVn4M1/R+khNX1IH4E9GoTg47+rX8an9jwRSByDpR6PwiEWvPNusWICk4Uea05Z6dFGlBUihOr9Ukhr1Uol0cXEx4uvdaYn8H/VasxaRn2o605s4XeTV+ifAWvNPO3j1BlhrCj8u4vzWaTDAWvPP26RGA5wlNQP8lhbwF5IdVjstBgxQAAAAAElFTkSuQmCC" InformativeScreenshot="c56f4c8f920c209cbae7be1d13414269.png" ScopeSelectorArgument="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'grouping'" FoundElement="[foundplaylist]" sap:VirtualizedContainerService.HintSize="653,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63d6ff92-9573-4dff-a6df-aac49492bc93" InformativeScreenshot="16fa2ad19a90bb91cf039f79fdc5952f" Selector="[String.Format(&quot;&lt;ctrl name='Spotify – Search' role='document' /&gt;&lt;ctrl name='Spotify – Search' role='grouping' /&gt;&lt;ctrl name='{0}' role='link' casesensitive:name='false' /&gt;&lt;ctrl role='grouping' /&gt;&quot;, playlistName_In)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <If Condition="[foundplaylist is nothing]" sap:VirtualizedContainerService.HintSize="653,312" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[foundplaylist_out]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[foundplaylist_out]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Users\andre\AppData\Roaming\Spotify\spotify.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATWSURBVFhH1Vdbb1VFFK5KAwotpfQ2e/bscqkFIbUQpFWpNJK0oEnBcmoFWloEBO+JLybqg0aEB9+8YKsxvmlUHtTEaEiABAW8342iCBRKuQT/w/L7Zuacs8/pBk9O+6CTfNn7zKxZ65s136zZp+R/06Lft1QA9wCvAJ8Dp4DLHnxnH8e6gQo/beINzmqBXcAZQAoEbXcDtd5NcQ0OBoCzQFKQQjAKDHp3hTdMmgK86p1MBl4DSr37qzcYMvi7fuJk4n3g30nAaG9s0mRjyIdJbjDoy5vgcBz4436J/gRObJXoLw++s49jSfOSMeDD5TYMVAEXMoYMcHa7w0m8/zoo0bf9Yo5uFHN4g5jPNkj05SaJvu939qe3STT6gERnvD1JZ4PGcQmo8WGzDZ08as4Iwc2RjRK+1CF653IJ1iyU4JY5EjRqUfV1ogwQAXOVBIuMBLfNE71usejHWyXc2ynmUK/LDglxIbkEiN0+rGvoKAfG7CDYm09SouYFoqZVADNFXY9nGvwdR37/DXgPaiS4s1HC59uxEGRqFFkhoSwBZjpbrPBjXWYQKQzfWCOqZIZzOGOWKAWHN4V2pcGqRgk6kZGOBRK034jMzBXVALI11aKmeyIkQfAdGdMPt4j5qi+fxHof3hLInvnjEBT2O3y6TfRDyyV88y4xB+7FXm92+3oKez2CFY3gSYfUxtd9Yj5NSTi8WvQjLZaoqpwNAiBRhgVMKZegrcHZZgWbPRH4cSRDIE2CYrqwQ+ovPyjRxZ1OjFQ8nfw84J78TbvzO5wN7KNz2HcQNR90i962TJSucdlEBqMfsQjOcXGO+fCWwOlM8DQonmMQ4hBW9VirFRlXESyDGJfUu+cdDaLXQnxYdfhyh8sUA5AEARGa/T0SPrVCzEfd+YIc8eEtgb9jAzbN5sNup/Sp2MdryqQOqyDUtWWirgPwzPRh3NrVQSvQRfjcSntcM8eSz5PYsngMxPThEwjgTIfvdGH/KuG0WoJWHLPem20mwmfaJHx2pdPIoy223+55WOtERzKl5aLmKNFP3GprRyztceQQGL8FEIv5eL1Nof3NlYxhJdznNMYA9nPPD99na4BONdlTQ+Fx74POBY4AdZUbI2cLjuYNOlB4lyCudEGh+L7BcWIF5LH6wYuK4yREIYKQOdArejsEWFVlCUUnSGCc/y98eEtg/AUEx3ZVu9pFDy5FYcGZb4qQWugChYYpDxaiNqyYL7p/iYQvrhJzEBWQJZlkSATzLenku2LYh7cE+KmVawAHuqcJIpvq9nUm9ABRBotRepfiFDSDzHwUIJ53K9LpomZjxV2LxLzdBSEjY6wZV76oUj68JcBSfD426O6D99aKfvJ2Cd+622kBBSf6ydeAX/D8DpcTVs1xW4CYIZ4KiFBvapboN/hJJnARyP1uRMcLMQM3mbcazzMrH9+5l3SYBvef/RQidQBSvMAskeb6/MITxx4fNtvQWQ1kr+NiwGAULgMzW8mrT76O2TCwOWZYPEgkeeXE1T9SYTCUN2Ey8boPc+UGo1KAH5BJDiaCfUDBX8YkwU/pJEfFYBgoLHi8YdIW4Jx3Ugz4lbXVuyuuwUEdwCPKfzlJQZJA2z2A8m4m3uBsFpACuDW8O+J/TnmZsY9jPUCln/ZfbyUl/wAv1CA978rAXwAAAABJRU5ErkJggg==" InformativeScreenshot="689f45eb119775d24e8ac284f41bc145.png" Selector="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,194 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="veryplaylistEXISTENCE" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="playlistname_in" Type="InArgument(x:String)" />
+    <x:Property Name="songURL_in" Type="InArgument(x:String)" />
+    <x:Property Name="browserInstance_in" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="browserInstance_Out" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>714.666666666667,2017.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>veryplaylistEXISTENCE_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="veryplaylistEXISTENCE" sap:VirtualizedContainerService.HintSize="656.666666666667,1952.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ashes by celine dion - YouTube" sap:VirtualizedContainerService.HintSize="594.666666666667,1842" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[browserInstance_in]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[browserInstance_Out]" ScopeGuid="f076b969-bc5a-409e-aeb8-88a9804e7f79" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="560.666666666667,1703.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="foundPlay" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON button'" sap:VirtualizedContainerService.HintSize="498.666666666667,158.666666666667" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f076b969-bc5a-409e-aeb8-88a9804e7f79" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=adele+hello" DesignTimeRectangle="1739, 288, 60, 60" ElementType="Button" FriendlyName="'BUTTON button'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;ytd-item-section-renderer&amp;gt;div&amp;gt;ytd-video-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-menu-renderer&amp;gt;yt-icon-button&amp;gt;button' id='button' parentid='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' id='button' parentid='button' tag='BUTTON' aaname='' /&gt;" Guid="5b822921-96d7-4961-92d9-29320efd7f13" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACOSURBVHhe7dAxAQAwDITAOnj/alMDOIDhFkbetjNrAEWTBlA0aQBFkwZQNGkARZMGUDRpAEWTBlA0aQBFkwZQNGkARZMGUDRpAEWTBlA0aQBFkwZQNGkARZMGUDRpAEWTBlA0aQBFkwZQNGkARZMGUDRpAEWTBlA0aQBFkwZQNGkARZMGUDRpAEUT+YDdBwwrwQ+HAGwkAAAAAElFTkSuQmCC" InformativeScreenshot="ca50e72c24a2f8395dae1d02ee876d41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='adele hello - YouTube' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1532, 225, 267, 54" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-search&amp;gt;div&amp;gt;ytd-two-column-search-results-renderer&amp;gt;div&amp;gt;div&amp;gt;ytd-section-list-renderer&amp;gt;div&amp;gt;div&amp;gt;ytd-search-sub-menu-renderer&amp;gt;div&amp;gt;div&amp;gt;ytd-button-renderer&amp;gt;yt-button-shape&amp;gt;button&amp;gt;yt-touch-feedback-shape&amp;gt;div&amp;gt;div' idx='2' isleaf='1' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' isleaf='1' parentid='container' tag='DIV' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Save to playlist'" sap:VirtualizedContainerService.HintSize="498.666666666667,158.666666666667" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f076b969-bc5a-409e-aeb8-88a9804e7f79" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=sorry+not+sorry+demi+lovato" DesignTimeRectangle="1481, 468, 318, 54" FriendlyName="'Save to playlist'" FullSelectorArgument="&lt;webctrl idx='3' tag='TP-YT-PAPER-ITEM' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='TP-YT-PAPER-ITEM' aaname='           ' check:text='Save to playlist' /&gt;" Guid="deb0e7ba-b7c5-4e0f-9060-f26c43748471" ImageBase64="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" InformativeScreenshot="733c6f990800c9ff62ce7b18cd083482.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='sorry not sorry demi lovato - YouTube' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'DIV  playlists'" FoundElement="[foundPlay]" sap:VirtualizedContainerService.HintSize="498.666666666667,107.333333333333" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bcc3f3ee-3102-4059-a989-b10674bf7813" InformativeScreenshot="aa2029cd5b750354a5cbbaf2e613aaeb" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='* - YouTube' /&gt;&lt;webctrl id='label' tag='YT-FORMATTED-STRING' innertext='{0}' /&gt;&quot;, playlistname_in)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <If Condition="[foundPlay is Nothing]" sap:VirtualizedContainerService.HintSize="498.666666666667,1042.66666666667" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="462,849.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,733.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Create new playlist'" sap:VirtualizedContainerService.HintSize="338,158.666666666667" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f076b969-bc5a-409e-aeb8-88a9804e7f79" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=paste+carbonara" DesignTimeRectangle="910, 700, 176, 30" FriendlyName="'Create new playlist'" FullSelectorArgument="&lt;webctrl id='label' parentid='primary-text-container' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='label' parentid='primary-text-container' tag='YT-FORMATTED-STRING' type='' aaname='Create new playlist' check:text='Create new playlist' /&gt;" Guid="134a4989-cda0-4b07-9c09-069c0a2a80d4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAiCAYAAAD28vNsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAhSSURBVHhe7ZrJihVLEIbvq/TeB3ApuHAjuBBxIUqL2KAgooiiDYoT2E44oyKiOHQ7gAMKDqCoIIrzPGu38zw8QV6+hL+Iys4qqs6VPtcyFz/dlRWZERn5Z2Rk1Pmno6PDJSQ0BYnQCY1CInRCo5AIndAoJEInNAqJ0AmNQiJ0QqOQCJ3QKCRCJzQKidB/Ic6cOeN+/frldu3aFX3/u8D46EGfbR8/frwbPXp0ru13IUro4cOHu/3797vXr1+7nz9/eqO+fPnirl+/7mbPnj1IPuHPQjsJvWjRIvfp0yc3MDDgpkyZkpP/HRhE6IkTJ7rHjx97Q75//+4ePHjgbty44d68eePJ/fnzZ7dmzZpcn3ZhqBamaWgnoefOnevev3/vnjx54iO1la8C+jx79syPMWPGjEHvc4QeMWKEu3btmjfi9u3bbsKECdm7YcOGud7eXk9yIve0adOyd+1CInRraCeh/ytqEXrdunXu27dvhYSF1FevXvVGHjx4cND7oUYidGv4awitiZYZsGfPHi9DPq22W7duua9fv/p3KCM1se/Ju3kmutOXtOXSpUu5E0BYsGCBu3nzps/ZkaXPo0eP3MKFCzMZ2RnCLpDuAUqVwIsXL9zmzZv9xpRcDKtWrfLzYV4bNmzw/TTG8+fPc7YIVfQRBLDz1KlTub7z5893Hz9+9KnemDFjsnZOzPv373tbsMn2scAfyGzZssX7Ff+ih7+nT5/OjSn50F+gq6vLXb582ee4vNcc8IFkduzY4X78+DHIViC/wQGIFyM0JISMklE7Y508edJ9+PAhp1v+E5F5ZxESO0doFpCBdu7cmbVVAf2YJCSkP4tz5coV/2716tXescrHSWm4ECD39OlTn7NrHHLzUJa/PNPe09Pj5RYvXuz27dvn0yImxSLyPHPmTP9+5MiRvi863r175+8Ad+/e9c5mrL1792Y6Y9DCSP7Vq1d+DMZCH6SdNWtWJl9VH3YzD0gKWdW/r6/P9+UdMmqfPn26Hy9c/BAiKGvAGOiW32jHNmwM5S2hyW3fvn3r7UAffewcdu/e7eVYr5cvX3o9y5Yty/oDjXvixAn/XJXQkBmfIEt2YNdd/sNfbNhDhw55/6P/6NGjnqt2Y2WE1g5gAmXRIAYIjTEQdPLkyVm7xmQCS5cuzdrZcWfPns1NftSoUdnl00YEwCRwtDaJEFsYwEnB4l64cCG3kPPmzfMEQQdksX0sRGhLRsBY9+7d8zrRofaq+qw/tPnwBScS/ZnjsWPHsv4bN270Nly8eDFri0F+uHPnjhs3blzW3t3d7UnK2ETWUN767dy5c94u7klqA5s2bfJpKKekSm3nz5/3/S1RNTdL9KqE1jwhtfXf2rVr/TqwgRT4rA9LUw4Jtkpo+oXVj+3bt3tnxhZEx2wYrWIQwdBj22MLg9NxPmOjw8oDbMF5ODF8J0gfJ0CYniht0CLV1Uc/fIJveIbYLA5RiZPA+oPUxMoWIeYHQfbaYFAmHyJGQAgLcWNtlvhVCS2ehITm/23btuWi8JASOuwnx5XBTgxQp7Q5tEUVQsthYd8QZYtZtIFAuEh19YVRl8jJM4tKmzaG8mfGVjQvQhlBNRdOz7Fjx5bKMxebQ1vYdYJc5NBEbgoJtHHScsKQPmm80FcgRmiiL/Yhy4mGH0hVLbmFyoQGLCBGtZJDlxGamiMRKAYuLXZHs7jsdOXFgHFor0NoxmBjxHQC5eMxtELoqvq4eJEnimBETp5ph+yQBFIocjNmeEqEiPlBmDNnjr9oWQLF5FesWOHngJ+xFxvwPXkq7WHgUeQn/RDB0UOaJZnQVyBGaECBAC7oUgiwBf/Y4kEtQmui1oAQZVWOIkLbvLAIMhTnhZeNIoLFFkYOE0msfFW0Quiq+pQzE4nJEelHKZR2kZ335K4saJXyaMwPguZSFqFtHm9zbVBEQIgL+chv169fn21ou/nqENpi0qRJ3g5F7YcPH9ZPOYDq0ORysc+SGBurQxcRmpsxET9W4glRNlFy86qE1oRji1MVdQjdij78gjzHO/5WBQEQkfADfoYktupRhDJCV8mhy0hCNSeM8ECbAPu5jMbmX5XQR44c8fZRspUc6Ozs9Fwk/eQEoa3MVpAjNHkbxw1GEIEtCZlA0ZfCIkIjgyyTpcZody/VEPrpIqnoxDhELiunnVpE6DCKHT9+3G8kyoO2vIZ+asXkaGUbrA6hQV19uhAzDgtjc2RyaXwMQhIVQX4I10ylOMayF8uQ0LrYsk62ysFYjIlszBYITB/exypHVQlN/o0c3LN589SpU11/f3/uwi1CF13Cc4QG9rccRAhqkeFvOUjYbZ8iQgPVlrXgGG3rm7b8xa0eOdohMeB/nEZ76FSdAIyPDeR8tOMUbUz0oI9n1b+Zn61/h6hL6Lr6RCDkiW62yqONHeoogwiKnyAL64Xt+IV2bLFECQkN8CW+xl6iourA8n0sIiqCMpYuuRZVCR1eCmU/l1N0c5IpGPKXkwFZ/MRJZj90DSI0YGcePnw4IzGdGZyBY2G+jNAg/FLIX/KiJUuW5OT42nbgwIHsYoAc/bhQMdEwmrFIOFILoZq2xgq/3NGfk6IsOoO6hAZ19SkqhacLC8YiMaey0qKFCEq9njVShQhCV/1SiN6tW7d6kmA7+tl0K1eu9GQrWl/8b6sdFlUJDaif20shNmALPsW3kgOcgnyxRQZeLl++PHsXJXTCn4UYQYcCbBROH/vho91IhG4A2kVovqISye3J2G4kQjcAQ0lo8n9SA3JnpQX/h58SC4nQDcBQEppaNmkGZObXcLFfHrYTidAJjUIidEKjkAid0CgkQic0ConQCQ1Ch/sXE2I/Dfz51hYAAAAASUVORK5CYII=" InformativeScreenshot="c70f851a65da9eca6ac6987d89bae044.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='paste carbonara - YouTube' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f076b969-bc5a-409e-aeb8-88a9804e7f79" Text="[playlistname_in]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=+Shape+of+you+Ed+Sheran+" DesignTimeRectangle="852, 660, 238, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='input-1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='input-1' tag='INPUT' type='' aaname='' /&gt;" Guid="7abf57ae-227d-44d4-9b8d-28b9f766bb5d" ImageBase64="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" InformativeScreenshot="7e9deeb03b9a2546ca7452e3e3df177c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Shape of you Ed Sheran - YouTube' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="852, 633, 237, 27" ElementType="Text" FriendlyName="'Name'" FullSelectorArgument="&lt;webctrl id='paper-input-label-1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='paper-input-label-1' tag='LABEL' type='' aaname='Name' check:text='Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPEAAAAfCAYAAAA2hSv7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANlSURBVHhe7Zo9SytBFIbvX0nvjwj4A6wklYVYCYqQxkYEtYmIKYKC2KhBi8SANoJERNQmIVFBJdGYDxQS86XRX3Au78AumWT36oXci5O8xQPJzNmZbZ4958zuL4/HI4QQc6HEhBgOJSbEcCgxIYZDiQkxHEpMiOFQYkIMhxITYjiUmBDD0SSOx+Py+fkp19fXMjw8rAUCn88nT09PUqlUZHp6umueEPL/cZT4/f1ddnZ2tEBAiQn5eThKDF5eXmRyclILpsSE/DwcJYaoHx8fcn5+LkNDQ/Y8JSbk5+EocSQSkcfHR2k2mxIMBu15N4kh+vr6uhQKBSU/QCbf2NjQHgI3Nzfq2q2tLS327u5OpqamZH5+XvL5vD2O3xizrrfw+/1ye3uryn63vQgZFBwl3t7eVvJCYsgMeTHvJvHx8bGSKZfLSTQalYODAyUWJNvc3LTjIDHisG4ikVCxWB9jr6+vUq/XldCxWExSqZS6vrOsX11dVXG4h6OjI7XX8/Ozit3d3bXjCBkUXCVGVkM5DcEgKeadJB4fH5eHhwclnyU7mJubk1qtJul02h6DxG9vb7K2tmaP4RT8/v5e7XtycqJl07OzM2m1WvaDYGRkRDKZjJTLZZmdnbXjJiYmpFQqSbFYlLGxMXuckEHAVWL8RwZEJkTmW1pacs3ETmAecYi35LbK6c5rsS+yM7Js+zjuo/1+AoGANBoNubi40OIAxnCfCwsLXXOE9DN/lBjgVRNKVWRaZDwniZFNUQJDeGRurGHxNxKvrKxo450SW//dcFqDkH7nS4khKPpTlLWHh4ddEnu9Xrt/RZ+LbIo5ZE30uf9CYuy3t7fXRTgcVuV9+xqE9DtfSgzQf6IPRY9brVY1EVG+ooxNJpNaP4t5xPVSYjwgEOdUThMyqHxLYrC/v2+Xyu0iWn0qPtVslzgUCinheikxDq1weIWHRmf/vLi4qPbkayYyaHxbYutkuFNiCGq9JsK7X5S6iLOE76XEwHrFBC4vL1UZjTIe5Tz2Qt/evgYh/c63JQbLy8tKnk4R8aHG1dWVEgny4oALB2KQCrEzMzMqrhcSA3wAks1m1X6YR5l/enoqo6OjWhwhg4AmMSHEPCgxIYZDiQkxHEpMiOFQYkIMhxITYjiUmBDDocSEGI1HfgNdDwmB8jxZagAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="338,158.666666666667" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f076b969-bc5a-409e-aeb8-88a9804e7f79" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.youtube.com/results?search_query=+Shape+of+you+Ed+Sheran+" DesignTimeRectangle="1004, 821, 110, 54" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl idx='2' isleaf='1' parentid='actions' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='actions' tag='DIV' aaname='' /&gt;" Guid="b8c58a4e-b155-4292-b039-f798e505efcc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAA6CAYAAABs1g18AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAATNSURBVHhe7Zn5a1xVFMf9VzJ7kulkkplMZk2VWlrFiFjrUqtYbZGWokiNtBILaau0YkraYqqNae1if1AQRfyhiD+4oL+4giuCiDvuu2KV4/2eN+963+RNEsF5aQ7nhw/NnHPufcvnLu+9ntfV1UXK0kdFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCkFFCmFxRMZi1L16A5X3vUaNE3/Q8GmixsmzVJl8n3ou2cz50HZKWyIXGUtmqHjHEzT8yN8scBYmPjh2huvC2kdJdu12PqfGw79S98rrQ2vOFSIXmd94wEos73udMivWUbKwnNL1S6m0+0UvZ0BdWPsoUZFtSA4MU23qM0/i3lcplskG8vhdvvdNzlcOfEDxbDGQjxoV2YbslTu8GXfqLGUv3xZa07/5iHfzjv3CszXe00+ViXc4Vhp/nvKbDlLj+G9UO/I1z2RuF09Qbt041Q5/bmd09f5POIZc4BjNWuS51vRbn/meCqOPm4FT4BpIgzzkXFqFYuDlb56i+vS3Xn4R9/lIRQ7ccoIvuP7Qd5SqXhxaE0v3siDMXuyTrkjcSNws/O2LRM3gXc9wbBZGVP/WGXtTW2vRV+Pkn/Z3+b63eBXIXHCVEf0x1Y/+ZPupz/zAMeTQF+pQ77d1Qb/LrtkZuK5OE6nI0vhzfKGB2TQPrkhQPfQR9d04QcuuHuOcv+fWj/1M2TWjPOPiPXkqbHvUxjPnr+W+ei+7lVcD0HfTpDdbjeTctbu8AWLqc+t322O3XVpNm+KOp7xreeBL6jYrB2KJvjKVdr3gxc0WgsFo23SYJSUSEhP5yr85MyuwlyJXuP2xQLtErkTVgx9yDss1Yq2z3a9FDOfEtVuP2ng7kanKRXY5zV13j41zzqw0WHEwKHhgOblOsqRE4l/89nPp5WvM8vcj5+ZicOeztg3va5sOBfZIl4WItDO7pW0r/gCKgnNuj2xlLpHuQwn2s9r0N6EUtz/p9eXsa1hKh/a+wnsmlsPG8d+9m78AkX6cl26zd4YdE0T5ChWpyIU8teY3Tno3L+SptVUk8qhDDu3cfsLA/ofjs5jVG2z8vy6tWDL968Ds9OOLSaQi3b1l6O6XZ329CXuPnEtkIl+l6tSnoTkGT6vO6wckobZ1aU8OrrDntRCR7pKOZTuWTNsc03yICsQ6TKQiQf+WaW80G/AlJ10foXjvQNsvO3OJ5P6acrg/swfjyRHxVGkl91fZ/66VZt9RzbKaW7+Hb7j7pAlckd2rbuB3VsTxlIuB55Fmgf5xB247bc4rz/IyRjKOiT451uyr00Qukt/lxs54wpo3L4CJu99a5xOJm+WKaKV2+AtK10a4NlVexb9n1eFcTv3FfxfvfNr27X6J8sEs5ZwZHJX97wVyLpWJt+2gioLIRTJm5OLrB76C8PubuXD8LwiW1davIvOJZMzMmu9rjU+qdCEN7XnJvjeiTfaKUXPsN0KP0TuyxcrEObp7ov9lp/bgV95xDfgbMeT8uihYHJHK/46KFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFIKKFEEX/QNd1ddtADsQjAAAAABJRU5ErkJggg==" InformativeScreenshot="d5d1dfece10ebc35deb5b06831e3c891.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Shape of you Ed Sheran - YouTube' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,106.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACUSURBVDhPpZIBDYAgEEUvAhGMQAQiEIEIRiASEYxik+8d4ER3OBG3p/iPvY3jCMAUajjC9UNkGFeJHc66uQuIQl6OEYqAyDbhKFYE/hGOEEQgZ9OKwL4Dzum1QnwXnE9KwLJoez4Ktu2nQI7gvV4rZEG/iYavW8svchMnr5E/vJgYJH5VSTvKKyO9edIZ5QnU8DugAz5ePeeqirlIAAAAAElFTkSuQmCC" InformativeScreenshot="c3cc53c163ae71f3dbad6223963da90f.png" Selector="&lt;html app='chrome.exe' title='ashes by celine dion - YouTube'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

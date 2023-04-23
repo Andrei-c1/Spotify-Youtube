@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Extract_Songs_Number" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="songsNumber_out" Type="OutArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>578,1003</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Extract_Songs_Number_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Extract_Songs_Number" sap:VirtualizedContainerService.HintSize="476,938" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Spotify Free" sap:VirtualizedContainerService.HintSize="434,846" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="2d1c711c-cb50-423d-9ad7-4319453c5270" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,554" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="playlistInfo" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text '•55,343 likes•127'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2d1c711c-cb50-423d-9ad7-4319453c5270" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="536, 7, 807, 316" FriendlyName="'•55,343 likes•127'" FullSelectorArgument="&lt;ctrl name='Spotify – *' role='document' /&gt;&lt;ctrl name='Spotify – *' role='grouping' /&gt;&lt;ctrl idx='6' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Spotify – Best Karaoke Songs Ever' role='document' /&gt;&lt;ctrl name='Spotify – Best Karaoke Songs Ever' role='grouping' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" Guid="24465f4e-1020-43e2-92e1-bc8c37e1a5ce" InformativeScreenshot="c14911990ba8c73cb6e4272729edbb48.png" ScopeSelectorArgument="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[playlistInfo]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[playlistInfo]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[playlistInfo.Split(" "c)(1)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[playlistInfo]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[playlistInfo.Split("•"c)(1)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[songsNumber_out]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(playlistinfo)]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Users\andre\AppData\Roaming\Spotify\spotify.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATWSURBVFhH1Vdbb1VFFK5KAwotpfQ2e/bscqkFIbUQpFWpNJK0oEnBcmoFWloEBO+JLybqg0aEB9+8YKsxvmlUHtTEaEiABAW8342iCBRKuQT/w/L7Zuacs8/pBk9O+6CTfNn7zKxZ65s136zZp+R/06Lft1QA9wCvAJ8Dp4DLHnxnH8e6gQo/beINzmqBXcAZQAoEbXcDtd5NcQ0OBoCzQFKQQjAKDHp3hTdMmgK86p1MBl4DSr37qzcYMvi7fuJk4n3g30nAaG9s0mRjyIdJbjDoy5vgcBz4436J/gRObJXoLw++s49jSfOSMeDD5TYMVAEXMoYMcHa7w0m8/zoo0bf9Yo5uFHN4g5jPNkj05SaJvu939qe3STT6gERnvD1JZ4PGcQmo8WGzDZ08as4Iwc2RjRK+1CF653IJ1iyU4JY5EjRqUfV1ogwQAXOVBIuMBLfNE71usejHWyXc2ynmUK/LDglxIbkEiN0+rGvoKAfG7CDYm09SouYFoqZVADNFXY9nGvwdR37/DXgPaiS4s1HC59uxEGRqFFkhoSwBZjpbrPBjXWYQKQzfWCOqZIZzOGOWKAWHN4V2pcGqRgk6kZGOBRK034jMzBXVALI11aKmeyIkQfAdGdMPt4j5qi+fxHof3hLInvnjEBT2O3y6TfRDyyV88y4xB+7FXm92+3oKez2CFY3gSYfUxtd9Yj5NSTi8WvQjLZaoqpwNAiBRhgVMKZegrcHZZgWbPRH4cSRDIE2CYrqwQ+ovPyjRxZ1OjFQ8nfw84J78TbvzO5wN7KNz2HcQNR90i962TJSucdlEBqMfsQjOcXGO+fCWwOlM8DQonmMQ4hBW9VirFRlXESyDGJfUu+cdDaLXQnxYdfhyh8sUA5AEARGa/T0SPrVCzEfd+YIc8eEtgb9jAzbN5sNup/Sp2MdryqQOqyDUtWWirgPwzPRh3NrVQSvQRfjcSntcM8eSz5PYsngMxPThEwjgTIfvdGH/KuG0WoJWHLPem20mwmfaJHx2pdPIoy223+55WOtERzKl5aLmKNFP3GprRyztceQQGL8FEIv5eL1Nof3NlYxhJdznNMYA9nPPD99na4BONdlTQ+Fx74POBY4AdZUbI2cLjuYNOlB4lyCudEGh+L7BcWIF5LH6wYuK4yREIYKQOdArejsEWFVlCUUnSGCc/y98eEtg/AUEx3ZVu9pFDy5FYcGZb4qQWugChYYpDxaiNqyYL7p/iYQvrhJzEBWQJZlkSATzLenku2LYh7cE+KmVawAHuqcJIpvq9nUm9ABRBotRepfiFDSDzHwUIJ53K9LpomZjxV2LxLzdBSEjY6wZV76oUj68JcBSfD426O6D99aKfvJ2Cd+622kBBSf6ydeAX/D8DpcTVs1xW4CYIZ4KiFBvapboN/hJJnARyP1uRMcLMQM3mbcazzMrH9+5l3SYBvef/RQidQBSvMAskeb6/MITxx4fNtvQWQ1kr+NiwGAULgMzW8mrT76O2TCwOWZYPEgkeeXE1T9SYTCUN2Ey8boPc+UGo1KAH5BJDiaCfUDBX8YkwU/pJEfFYBgoLHi8YdIW4Jx3Ugz4lbXVuyuuwUEdwCPKfzlJQZJA2z2A8m4m3uBsFpACuDW8O+J/TnmZsY9jPUCln/ZfbyUl/wAv1CA978rAXwAAAABJRU5ErkJggg==" InformativeScreenshot="5e82a986ac64433fb5efcf45041766dc.png" Selector="&lt;wnd app='spotify.exe' cls='Chrome_WidgetWin_0' title='Spotify Free'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
